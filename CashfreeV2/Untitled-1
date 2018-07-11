@@ -1,0 +1,8 @@
+import hashlib
+import hmac
+import base64
+
+data = "appId=" + appId + "&orderId=" + orderId + "&orderAmount=" + orderAmount + "&customerEmail=" + customerEmail + "&customerPhone=" + customerPhone + "&orderCurrency=" + orderCurrency;
+message = bytes(data).encode('utf-8')
+secret = bytes(secretKey).encode('utf-8')
+paymentToken = base64.b64encode(hmac.new(secret, message,digestmod=hashlib.sha256).digest())
