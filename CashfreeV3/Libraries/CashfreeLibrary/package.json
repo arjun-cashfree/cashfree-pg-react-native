@@ -1,0 +1,9 @@
+{
+  "name": "CashfreeLibrary",
+  "version": "0.0.1",
+  "keywords": "react-native",
+  "dependencies": {
+    "react-native-wkwebview-reborn": "^1.21.0",
+    "react-navigation": "^2.6.2"
+  }
+}
